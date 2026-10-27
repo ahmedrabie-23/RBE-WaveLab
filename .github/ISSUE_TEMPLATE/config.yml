@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+- name: Questions, feedback and learning
+  url: https://github.com/ahmedrabie-23/RBE-WaveLab/discussions
+  about: Use Discussions when enabled for community questions and experiments.
+- name: Confidential security concern
+  url: https://github.com/ahmedrabie-23/RBE-WaveLab/security/policy
+  about: Read the private-reporting process; never publish confidential security details.
+- name: General owner contact
+  url: https://www.linkedin.com/in/ahmed-mo-rabie/
+  about: General contact and collaboration with Ahmed Rabie.

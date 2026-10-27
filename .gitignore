@@ -1,0 +1,27 @@
+# Only reviewed public files are eligible for ordinary staging.
+# Forced adds bypass ignores: recheck the complete tree/history before every push.
+*
+!/.github/
+!/.github/ISSUE_TEMPLATE/
+!/assets/
+!/docs/
+!/.gitattributes
+!/.github/ISSUE_TEMPLATE/01-bug-report.yml
+!/.github/ISSUE_TEMPLATE/02-feature-request.yml
+!/.github/ISSUE_TEMPLATE/03-documentation-problem.yml
+!/.github/ISSUE_TEMPLATE/config.yml
+!/.gitignore
+!/CODE_OF_CONDUCT.md
+!/CONTRIBUTING.md
+!/COPYRIGHT.md
+!/LICENSE.txt
+!/README.md
+!/ROADMAP.md
+!/SECURITY.md
+!/SUPPORT.md
+!/assets/rbe-wavelab-icon.png
+!/docs/GETTING_STARTED.md
+!/docs/PRIVACY.md
+!/docs/RELEASE_STATUS.md
+!/docs/REQUIREMENTS.md
+!/docs/SCIENTIFIC_SCOPE.md

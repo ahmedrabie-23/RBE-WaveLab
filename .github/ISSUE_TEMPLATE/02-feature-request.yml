@@ -1,0 +1,30 @@
+name: Feature Request
+description: Propose an improvement; this does not create a development commitment.
+title: '[Idea] '
+body:
+- type: markdown
+  attributes:
+    value: 'Public report: do not include passwords, confidential projects, proprietary engineering data,
+      customer information or unnecessary personal paths. For security concerns use SECURITY.md instead.
+      Early ideas can also go in Discussions.'
+- type: textarea
+  id: problem
+  attributes:
+    label: Learning or workflow problem
+    description: Describe the need without confidential data.
+  validations:
+    required: true
+- type: textarea
+  id: proposal
+  attributes:
+    label: Proposed improvement
+    description: Explain the benefit and intended use.
+  validations:
+    required: true
+- type: textarea
+  id: alternatives
+  attributes:
+    label: Alternatives and context
+    description: Optional; requests are reviewed best-effort, with no promised timeline.
+  validations:
+    required: false

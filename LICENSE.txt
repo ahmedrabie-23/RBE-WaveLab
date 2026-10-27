@@ -1,0 +1,73 @@
+# RBE WaveLab V1 — Proprietary Freeware License
+
+License identifier: WL-V1-1.0
+
+## 1. Parties and ownership
+
+The copyright holder and licensor is **Ahmed Rabie**, an individual (the “Licensor”). **RBE WaveLab** is the product; **RBE** is its public brand/display publisher, not an assertion of corporate registration. Copyright notice: **Copyright © 2026 Ahmed Rabie**. Contact and legal-notice route: https://www.linkedin.com/in/ahmed-mo-rabie/.
+
+This license concerns the proprietary WaveLab application and its accompanying documentation (the “Software”). Independently licensed components remain governed by their own terms under section 6. No ownership of the Software, WaveLab source access, trademark ownership or right to misrepresent endorsement is transferred.
+
+## 2. Free license and permitted use
+
+Subject to these terms, the Licensor grants a non-exclusive, no-charge license to install and use legitimately obtained **WaveLab V1.x** releases for personal, educational, academic, institutional, research and commercial purposes. You may use it on devices you own or lawfully administer and make reasonable backup copies. No mandatory account, activation fee or device-count charge is introduced.
+
+All WaveLab V1 releases and updates, including **V1.1 and V1.2**, are free of charge. Commercial use of the application is permitted; selling the application or charging for its proprietary installer is not. This policy does not promise that any particular update will be developed, or establish a development, release or maintenance schedule.
+
+## 3. Redistribution
+
+You may copy and redistribute the **original, unmodified WaveLab installer**, including internal institutional deployment, without charging for the proprietary installer or application. Preserve applicable WaveLab copyright/license notices and all required third-party notices and source-availability materials. Supply accompanying legally required materials, including covered sources, with redistributed packages where their licenses require it. Do not separate mandatory notices from the Software, misrepresent the distributor as the author, or suggest the Licensor endorses your activity.
+
+An external host or mirror may distribute the unmodified installer subject to these conditions. Linking to the official distribution is encouraged but is not mandatory. No official GitHub repository URL is invented in this document. A redistribution permission does not authorize modified, repackaged or otherwise altered WaveLab application distributions, sale or sublicensing of proprietary ownership rights.
+
+Independent rights to copy, modify or redistribute third-party components under their own licenses remain unaffected. This section does not restrict a right that applicable mandatory law prevents the Licensor from restricting.
+
+## 4. Proprietary code, modifications and mandatory rights
+
+WaveLab application source remains proprietary/closed-source. Unauthorized modified WaveLab distributions are not permitted. Do not remove applicable ownership notices or claim authorship of the Software.
+
+Reverse engineering, decompilation and disassembly of proprietary portions are restricted only to the extent permitted by applicable law. Nothing here excludes non-waivable rights, including applicable interoperability, security or other statutory exceptions, or independent third-party source/license rights. No restriction in this license overrides mandatory law.
+
+## 5. Version and continuing-use rights
+
+Users may continue using legitimately acquired V1 versions under their applicable license terms. Future pricing decisions do not themselves impose a payment requirement on previously licensed V1 copies. V1.x updates remain free under the approved policy; there is no promise of a fixed future development schedule or indefinite support.
+
+**V2 pricing and licensing are undecided.** This license does not create a free-V2 entitlement or decide V2 terms. An optional future version cannot silently amend the terms already applicable to a legitimately acquired V1 copy merely by being announced.
+
+## 6. Third-party software and source rights
+
+Third-party components retain their own licenses, notices, copyright and source-access rights. Where a proprietary WaveLab restriction conflicts with a component's license, the component's independent rights prevail for that component. Keep the accompanying `THIRD_PARTY_NOTICES.md` and complete `licenses/` materials, including MPL-covered sources in `licenses/source/`. Providing these upstream sources does not relicense or publish unrelated proprietary WaveLab source.
+
+Microsoft WebView2 Runtime and SDK/loader, NSIS/Tauri utilities and other components remain subject to their separate terms and required notices. Microsoft terms are not a WaveLab application license, and neither inclusion nor this license implies Microsoft or another contributor endorses WaveLab.
+
+## 7. Privacy and external services
+
+WaveLab requires no mandatory accounts and performs no application telemetry, automatic usage-data collection or automatic crash-report uploads. Projects and preferences remain local. Feedback is voluntary. Do not send credentials, confidential projects or unnecessary personal data when requesting help.
+
+Windows and Microsoft WebView2 may independently perform servicing, security, SmartScreen or other communication under their own terms and privacy notices. WaveLab's offline calculation capability does not assert that those external components never communicate when connected. Voluntarily using GitHub or LinkedIn is subject to those services' independent terms; WaveLab does not automatically upload projects to them.
+
+## 8. Support and educational use
+
+Support is community-based and best-effort: GitHub Issues for bugs, GitHub Discussions for community questions/experiments/suggestions, and LinkedIn for general contact/collaboration. The owner will identify the official GitHub location separately; no nonexistent repository, response time, repair deadline or service-level agreement is promised.
+
+WaveLab provides simulated results within its documented analytical model; it is not a physical measuring instrument or a certification of engineering outcomes. Evaluate suitability and important conclusions independently, observe validity messages and retain backups. No new category-of-use prohibition is created by this description.
+
+## 9. Warranty disclaimer and liability
+
+To the extent permitted by applicable law, the Software is provided **AS IS and AS AVAILABLE**, without a promise of uninterrupted or error-free operation, or a warranty of suitability for a particular purpose. The Licensor does not undertake an unlimited obligation to maintain or repair the Software.
+
+To the extent applicable law permits, the Licensor will not be liable for indirect or consequential losses arising from use or inability to use the Software, such as lost profits or lost data. This limitation does **not** exclude liability or remedies that applicable law makes non-excludable, and does not exclude fraud, deliberate misconduct or other liability where such an exclusion is prohibited. No fixed monetary cap, indemnity, exclusive remedy or universally enforceable zero-liability guarantee is invented.
+
+These clauses do not diminish mandatory consumer or other statutory rights, or attribute the Licensor's promises to upstream contributors.
+
+## 10. Termination and governing law
+
+This license does not expire merely because a later version is offered. If a user materially breaches applicable license conditions, the Licensor may request correction and may terminate the proprietary grant only through a lawful process, with notice and a reasonable opportunity to remedy a remediable breach where required. Nothing here authorizes arbitrary retroactive revocation for future pricing, removes mandatory safeguards or terminates independent third-party rights.
+
+**Egyptian law governs this license**, subject to applicable mandatory rules. No exclusive court, city, arbitration requirement or waiver of mandatory rights in another jurisdiction is asserted. The choice of law must not deprive a person of protections that cannot lawfully be excluded.
+
+## 11. Notices, approval and acceptance
+
+Legal contact: **Ahmed Rabie**, https://www.linkedin.com/in/ahmed-mo-rabie/. No postal address or corporate registration is supplied or invented. Whether additional notice details are legally required remains an unresolved review item; LinkedIn must not be represented as satisfying every jurisdiction's formal service requirements.
+
+By choosing **I Agree** in the installer, you accept this license for the provided copy. If you do not agree, choose **I Do Not Agree** and do not install or use the proprietary Software under this grant. Independent mandatory-law and third-party rights remain unaffected. This release installer requires interactive acceptance; an organization's acceptance must be made by a person authorized to act for it. A hidden or skipped page does not establish assent.
