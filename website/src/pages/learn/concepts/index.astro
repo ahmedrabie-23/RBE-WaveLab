@@ -1,0 +1,5 @@
+---
+import Base from '../../../layouts/Base.astro';import ArticleCard from '../../../components/ArticleCard.astro';import {getCollection} from 'astro:content';
+const entries=(await getCollection('concepts')).sort((a,b)=>a.data.order-b.data.order);
+---
+<Base title="Engineering concepts" description="Learn the assumptions and physical meaning behind transmission-line impedance, propagation, reflections, matching and attenuation." path="learn/concepts/"><div class="container"><header class="page-heading"><span class="eyebrow">Learning hub</span><h1>Engineering concepts</h1><p class="lede">Learn the assumptions and physical meaning behind transmission-line impedance, propagation, reflections, matching and attenuation.</p></header><div class="grid grid-2 section">{entries.map(e=><ArticleCard title={e.data.title} description={e.data.description} path={e.id==='getting-started'?'learn/getting-started/':`learn/concepts/${e.id}/`} label={e.data.level}/>)}</div></div></Base>

@@ -1,0 +1,5 @@
+---
+import fs from 'node:fs';import {resolve} from 'node:path';import Base from '../layouts/Base.astro';import {github} from '../lib/paths';
+const text=fs.readFileSync(resolve('../LICENSE.txt'),'utf8');
+---
+<Base title="Application proprietary-freeware license" description="Read the owner-approved WaveLab V1 Proprietary Freeware License, including free V1.x use, permitted redistribution and independent third-party rights." path="license/"><div class="container narrow"><header class="page-heading"><span class="eyebrow">Desktop application terms</span><h1>Free to use.<br/>Clearly licensed.</h1><p class="lede">The authoritative application license is reproduced without rewriting its rights or conditions. Website source and original educational content have separate rights notices.</p><a href={`${github}/blob/main/LICENSE.txt`}>View the official license â†—</a></header><section class="section"><pre class="license-text">{text}</pre></section></div></Base>

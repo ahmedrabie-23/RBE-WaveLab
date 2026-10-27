@@ -1,0 +1,13 @@
+---
+import { href } from '../lib/paths';
+import { nav } from '../data/site';
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="header-inner">
+  <a class="brand" href={href()} aria-label="RBE WaveLab home"><img src={href('brand/icon.png')} width="36" height="36" alt=""/><span>RBE <strong>WaveLab</strong></span></a>
+  <nav class="desktop-nav" aria-label="Primary">{nav.map(n=><a href={href(n.path)} aria-current={Astro.url.pathname.endsWith(n.path) ? 'page' : undefined}>{n.title}</a>)}</nav>
+  <label class="theme-control"><span class="sr-only">Color theme</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><select id="theme" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+  <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation">{nav.map(n=><a href={href(n.path)}>{n.title}</a>)}</nav></details>
+ </div>
+</header>

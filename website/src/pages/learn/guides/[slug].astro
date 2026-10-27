@@ -1,0 +1,7 @@
+---
+import { getCollection, render } from 'astro:content';
+import Article from '../../../layouts/Article.astro';
+export async function getStaticPaths() { return (await getCollection('guides')).filter(e=>e.id!=='getting-started').map(entry=>({params:{slug:entry.id},props:{entry}})); }
+const {entry}=Astro.props;const {Content}=await render(entry);
+---
+<Article {...entry.data} path={`learn/guides/${entry.id}/`}><Content/></Article>

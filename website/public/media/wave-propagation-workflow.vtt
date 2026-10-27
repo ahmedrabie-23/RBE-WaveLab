@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.207
+Open the Experiment Library and select Wave Propagation.
+
+2
+00:00:02.207 --> 00:00:03.896
+Choose Preconfigured and start a connected experiment.
+
+3
+00:00:03.896 --> 00:00:07.580
+Select Run to calculate the configured transmission line.
+
+4
+00:00:07.580 --> 00:00:12.546
+Open the Oscilloscope to view four measured CW voltage channels.
+
+5
+00:00:12.546 --> 00:00:16.032
+Open Plot Studio to inspect the current measured voltage curve.

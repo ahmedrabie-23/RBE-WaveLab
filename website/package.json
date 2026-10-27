@@ -1,0 +1,43 @@
+{
+  "name": "rbe-wavelab-website",
+  "version": "0.1.0-local-candidate",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "playwright test",
+    "validate": "node scripts/validate-build.mjs",
+    "audit:delivery": "node scripts/audit-delivery.mjs",
+    "test:release-builds": "tsx scripts/test-release-builds.ts",
+    "test:base-build": "node scripts/test-root-build.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "@astrojs/sitemap": "3.7.4",
+    "katex": "0.19.1",
+    "remark-math": "6.0.0",
+    "rehype-katex": "7.0.1",
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@astrojs/markdown-remark": "7.3.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@playwright/test": "1.64.1",
+    "@axe-core/playwright": "4.14.0",
+    "lighthouse": "13.5.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "parse5": "7.3.0"
+  },
+  "overrides": {
+    "katex": "$katex"
+  }
+}

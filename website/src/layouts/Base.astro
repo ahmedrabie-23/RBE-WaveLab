@@ -1,0 +1,28 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { href, canonical } from '../lib/paths';
+import { person } from '../data/site';
+import '@fontsource-variable/inter';
+import '@fontsource/ibm-plex-mono/400.css';
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+interface Props { title: string; description: string; path?: string; schema?: Record<string,unknown> | Record<string,unknown>[]; noindex?: boolean; }
+const { title, description, path = '', schema, noindex = false } = Astro.props;
+const url = canonical(path);
+const graph = [ { '@type':'WebSite', '@id':canonical()+'#website', name:'RBE WaveLab', url:canonical(), inLanguage:'en', publisher:person }, ...(Array.isArray(schema) ? schema : schema ? [schema] : []) ];
+const jsonld = JSON.stringify({ '@context':'https://schema.org', '@graph':graph }).replace(/</g,'\u003c');
+---
+<!doctype html><html lang="en"><head>
+ <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <script is:inline>try{const p=localStorage.getItem('wavelab-theme');document.documentElement.dataset.theme=p==='light'||p==='dark'?p:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}</script>
+ <title>{title} | RBE WaveLab</title><meta name="description" content={description}/><link rel="canonical" href={url}/>
+ <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'}/><meta name="color-scheme" content="light dark"/>
+ <link rel="icon" type="image/png" href={href('brand/icon.png')}/>
+ <meta property="og:type" content="website"/><meta property="og:site_name" content="RBE WaveLab"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={url}/><meta property="og:image" content={canonical('brand/social.png')}/><meta property="og:image:alt" content="RBE WaveLab — transmission-line learning"/>
+ <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={canonical('brand/social.png')}/>
+ <script type="application/ld+json" set:html={jsonld}/>
+</head><body><Header/><main id="main" tabindex="-1"><slot/></main><Footer/>
+ <dialog id="image-viewer" aria-labelledby="viewer-title"><form method="dialog"><button class="close-viewer" autofocus>Close image <span aria-hidden="true">×</span></button></form><h2 id="viewer-title" class="sr-only">Application screenshot</h2><img id="viewer-image" src={href('brand/icon.png')} alt=""/><p id="viewer-caption"></p></dialog>
+ <script src="../lib/client.ts"></script>
+</body></html>

@@ -1,3 +1,10 @@
 * text eol=lf
 LICENSE.txt -text -whitespace
 *.png binary
+
+# Website media must remain byte-identical on every platform.
+*.webp binary
+*.webm binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

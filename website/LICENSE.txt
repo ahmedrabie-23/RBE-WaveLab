@@ -1,0 +1,8 @@
+Copyright (c)2026 Ahmed Rabie. All Rights Reserved.
+
+Original RBE WaveLab website source is proprietary. No open-source or permissive license is granted for copying, modification, redistribution or commercial reuse of that original source except where applicable law requires otherwise or the owner gives separate written permission.
+
+This notice does not replace the desktop application's approved proprietary-freeware license, does not claim exclusive ownership of scientific facts/formulas, and does not restrict independent third-party rights. Third-party components and font software remain governed by their own licenses; see public/third-party-notices.txt. Original educational expression is separately described in CONTENT_RIGHTS.md.
+
+Owner: Ahmed Rabie
+Contact: https://www.linkedin.com/in/ahmedrabie23

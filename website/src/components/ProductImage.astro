@@ -1,0 +1,6 @@
+---
+import { media } from '../lib/media';
+interface Props { id: string; eager?: boolean; }
+const { id, eager = false } = Astro.props; const item = media(id);
+---
+{item ? <figure class="product-figure"><button type="button" class="gallery-trigger" data-gallery={item.src} data-alt={item.alt} aria-label={`Enlarge ${item.alt}`}><img src={item.src} width="1600" height="1000" alt={item.alt} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async"/></button><figcaption>{item.caption} Select image to enlarge.</figcaption></figure> : <div class="media-unavailable"><span class="eyebrow">Product media</span><p>Genuine application capture is not yet available for this view. No simulated interface is substituted.</p></div>}

@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/browser',fullyParallel:false,workers:1,timeout:60000,reporter:[['list'],['json',{outputFile:`.local/playwright-${process.env.WAVELAB_BROWSER||'msedge'}-results.json`}]],outputDir:'.local/playwright-output',use:{browserName:'chromium',channel:process.env.WAVELAB_BROWSER||'msedge',baseURL:'http://127.0.0.1:4321/RBE-WaveLab/',headless:true,viewport:{width:1440,height:1000},colorScheme:'light',trace:'retain-on-failure',screenshot:'only-on-failure'}});

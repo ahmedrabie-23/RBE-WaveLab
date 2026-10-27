@@ -1,0 +1,5 @@
+---
+import Base from '../../../layouts/Base.astro';import ArticleCard from '../../../components/ArticleCard.astro';import {getCollection} from 'astro:content';
+const entries=(await getCollection('guides')).sort((a,b)=>a.data.order-b.data.order);
+---
+<Base title="Practical user guides" description="Use the Workbench, Oscilloscope, Plot Studio and experiment templates with clear steps and truthful result-state guidance." path="learn/guides/"><div class="container"><header class="page-heading"><span class="eyebrow">Learning hub</span><h1>Practical user guides</h1><p class="lede">Use the Workbench, Oscilloscope, Plot Studio and experiment templates with clear steps and truthful result-state guidance.</p></header><div class="grid grid-2 section">{entries.map(e=><ArticleCard title={e.data.title} description={e.data.description} path={e.id==='getting-started'?'learn/getting-started/':`learn/guides/${e.id}/`} label={e.data.level}/>)}</div></div></Base>

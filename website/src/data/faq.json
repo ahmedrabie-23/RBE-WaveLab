@@ -1,0 +1,68 @@
+[
+  {
+    "id": "free",
+    "question": "Is WaveLab free?",
+    "answer": "All V1.x releases and updates are free under the approved proprietary-freeware license, including personal, educational, academic, institutional, research and commercial use. The application source remains private. V2 policy is undecided.",
+    "path": "license/"
+  },
+  {
+    "id": "platform",
+    "question": "Which operating system is supported?",
+    "answer": "The initial target is Windows 11 x64. Windows 10, ARM64-native execution, macOS and Linux are not qualified launch platforms. {{availability}}",
+    "path": "requirements/"
+  },
+  {
+    "id": "account",
+    "question": "Does it require an account?",
+    "answer": "Local WaveLab calculation and normal project workflows need no mandatory application account. GitHub community participation is separate, requires internet access and may require a GitHub account.",
+    "path": "privacy/"
+  },
+  {
+    "id": "offline",
+    "question": "Does it work offline?",
+    "answer": "Calculations, built-in lessons and normal local save/open workflows run offline. Windows and WebView2 may communicate independently when connected; clean-host offline runtime provisioning is not yet a passed qualification claim.",
+    "path": "requirements/"
+  },
+  {
+    "id": "transient",
+    "question": "Does it simulate transient signals?",
+    "answer": "V1 models supported steady-state positive-frequency CW experiments and reconstructs scope waveforms from analytical results. It is not an arbitrary pulse/transient solver or a physical hardware acquisition system.",
+    "path": "scientific-scope/"
+  },
+  {
+    "id": "states",
+    "question": "What do Not Calculated and Outdated mean?",
+    "answer": "Not Calculated / Run Required means no result exists. Outdated means an existing result no longer matches configuration. Manual workbenches require explicit Run on reopen; a saved result recording is not implied.",
+    "path": "learn/guides/manual-auto/"
+  },
+  {
+    "id": "probe",
+    "question": "What does Invalid Position mean?",
+    "answer": "A probe lies outside its attached physical line, for example after shortening it. Reposition it explicitly; silently clamping it would change the meaning of the measurement.",
+    "path": "learn/guides/workbench/"
+  },
+  {
+    "id": "invalid",
+    "question": "Why might a reading be invalid?",
+    "answer": "Check connection/reference, physical model/domain, probe position, signal amplitude, scope valid-frequency/bandwidth/trigger and reconstruction limits. Hidden, OFF, singular, stale and unresolved results are not interchangeable with measured zero.",
+    "path": "learn/guides/result-validity/"
+  },
+  {
+    "id": "formats",
+    "question": "How do projects differ from experiment templates?",
+    "answer": ".wavelab stores an authored project configuration; .wavelab-exp stores a portable educational experiment template. Neither is a simulation-run history or measurement-recording archive.",
+    "path": "learn/guides/projects/"
+  },
+  {
+    "id": "help",
+    "question": "How can I report a problem?",
+    "answer": "Use official GitHub Issues with a minimal nonconfidential reproduction, version and Windows details. Use Discussions for learning/questions. Confidential security concerns belong in the private reporting route. Support is best-effort.",
+    "path": "community/"
+  },
+  {
+    "id": "download",
+    "question": "Where is the official application download?",
+    "answer": "{{releaseAnswer}}",
+    "path": "download/"
+  }
+]

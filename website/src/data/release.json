@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "status": "pre-release",
+  "candidateVersion": "1.0.0-rc.5",
+  "platform": "Windows 11 x64",
+  "stable": null,
+  "notice": "The first public application release is being prepared. No application download is available yet.",
+  "knownLimitations": "Independent installer consent and ordinary uninstall/reinstall qualification remain unverified.",
+  "sourceNotesURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/blob/main/docs/RELEASE_STATUS.md"
+}

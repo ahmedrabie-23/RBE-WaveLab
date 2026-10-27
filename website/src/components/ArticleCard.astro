@@ -1,0 +1,5 @@
+---
+import { href } from '../lib/paths';
+interface Props { title:string; description:string; path:string; label?:string; number?:string; } const {title,description,path,label,number}=Astro.props;
+---
+<article class="article-card">{label&&<span class="eyebrow">{number&&`${number} / `}{label}</span>}<h3><a href={href(path)}>{title}<span aria-hidden="true">↗</span></a></h3><p>{description}</p></article>
