@@ -6,7 +6,7 @@
 
 When GitHub Private Vulnerability Reporting is enabled for this repository, use **Security → Advisories → Report a vulnerability**. Confirm that you are using the private report form. The prepared repository files do not themselves enable this setting, and its availability has not yet been verified online.
 
-If the private report button is unavailable, contact [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmed-mo-rabie/) with a brief, nonsensitive request to arrange a private reporting channel. Do not include exploit details, secrets or confidential attachments in that initial message or move them into a public issue as a workaround. LinkedIn is not represented as an encrypted vulnerability-submission service. Wait for an appropriate private route.
+If the private report button is unavailable, contact [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23) with a brief, nonsensitive request to arrange a private reporting channel. Do not include exploit details, secrets or confidential attachments in that initial message or move them into a public issue as a workaround. LinkedIn is not represented as an encrypted vulnerability-submission service. Wait for an appropriate private route.
 
 Once a private route is established, useful information includes the affected version, Windows version, potential impact and a minimal nonconfidential reproduction. Never use a real user's private data as proof. No payment, bug-bounty entitlement, legal safe-harbor promise or response deadline is announced here.
 

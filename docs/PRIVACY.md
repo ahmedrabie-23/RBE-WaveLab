@@ -6,4 +6,4 @@ This statement describes the WaveLab application, not a guarantee that Windows, 
 
 Public GitHub Issues, Discussions, pull requests, attachments and commit metadata may be visible worldwide. Do not post passwords, tokens, confidential projects, proprietary engineering data, customer information or unnecessary personal paths. Use newly created nonconfidential examples and inspect screenshots before sharing. Community participation is separate from using the offline application; GitHub may require its own account.
 
-For confidential vulnerabilities use [Security reporting](../SECURITY.md), not public channels. General owner contact: [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmed-mo-rabie/). No support email or additional organization is announced. See the [approved license](../LICENSE.txt) for the full application terms.
+For confidential vulnerabilities use [Security reporting](../SECURITY.md), not public channels. General owner contact: [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23). No support email or additional organization is announced. See the [approved license](../LICENSE.txt) for the full application terms.

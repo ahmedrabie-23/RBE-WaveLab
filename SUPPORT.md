@@ -8,7 +8,7 @@ RBE WaveLab support is community-based and best-effort. No response time, repair
 |---|---|
 |Reproducible technical bug|[GitHub Issues](https://github.com/ahmedrabie-23/RBE-WaveLab/issues)|
 |Usage questions, learning, feedback or suggestions|[GitHub Discussions](https://github.com/ahmedrabie-23/RBE-WaveLab/discussions)|
-|General owner contact or collaboration|[Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmed-mo-rabie/)|
+|General owner contact or collaboration|[Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23)|
 |Confidential security concern|Follow [SECURITY.md](SECURITY.md); do not open a public issue|
 
 These GitHub destinations are prepared for community setup. If a feature is unavailable, do not assume a report was received; use general owner contact without disclosing sensitive details.

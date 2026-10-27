@@ -10,4 +10,4 @@ RBE WaveLab is a learning community for students, educators and engineers worldw
 
 Maintainers may moderate, edit or remove inappropriate public content, close off-topic threads, and restrict participation when necessary. Moderation and support are best-effort; no response deadline is promised.
 
-For a sensitive conduct concern, contact [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmed-mo-rabie/) with a brief request for a private conversation. Do not post private evidence or personal details in a public issue. Security vulnerabilities follow [SECURITY.md](SECURITY.md).
+For a sensitive conduct concern, contact [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23) with a brief request for a private conversation. Do not post private evidence or personal details in a public issue. Security vulnerabilities follow [SECURITY.md](SECURITY.md).

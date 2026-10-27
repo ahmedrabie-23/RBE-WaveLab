@@ -55,4 +55,4 @@ No mandatory application account or application telemetry is introduced. Feedbac
 
 Once the repository and community features are published, use [Issues](https://github.com/ahmedrabie-23/RBE-WaveLab/issues) for bugs and [Discussions](https://github.com/ahmedrabie-23/RBE-WaveLab/discussions) for questions, learning and suggestions. These feature links are planned destinations; their presence in this prepared documentation is not a claim that the online features have been enabled.
 
-General owner contact and collaboration: [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmed-mo-rabie/). Support is community-based and best-effort, with no guaranteed response or repair time. Never post confidential projects, credentials or proprietary engineering data.
+General owner contact and collaboration: [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23). Support is community-based and best-effort, with no guaranteed response or repair time. Never post confidential projects, credentials or proprietary engineering data.

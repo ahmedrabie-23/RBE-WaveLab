@@ -4,7 +4,7 @@ License identifier: WL-V1-1.0
 
 ## 1. Parties and ownership
 
-The copyright holder and licensor is **Ahmed Rabie**, an individual (the “Licensor”). **RBE WaveLab** is the product; **RBE** is its public brand/display publisher, not an assertion of corporate registration. Copyright notice: **Copyright © 2026 Ahmed Rabie**. Contact and legal-notice route: https://www.linkedin.com/in/ahmed-mo-rabie/.
+The copyright holder and licensor is **Ahmed Rabie**, an individual (the “Licensor”). **RBE WaveLab** is the product; **RBE** is its public brand/display publisher, not an assertion of corporate registration. Copyright notice: **Copyright © 2026 Ahmed Rabie**. Contact and legal-notice route: https://www.linkedin.com/in/ahmedrabie23.
 
 This license concerns the proprietary WaveLab application and its accompanying documentation (the “Software”). Independently licensed components remain governed by their own terms under section 6. No ownership of the Software, WaveLab source access, trademark ownership or right to misrepresent endorsement is transferred.
 
@@ -68,6 +68,6 @@ This license does not expire merely because a later version is offered. If a use
 
 ## 11. Notices, approval and acceptance
 
-Legal contact: **Ahmed Rabie**, https://www.linkedin.com/in/ahmed-mo-rabie/. No postal address or corporate registration is supplied or invented. Whether additional notice details are legally required remains an unresolved review item; LinkedIn must not be represented as satisfying every jurisdiction's formal service requirements.
+Legal contact: **Ahmed Rabie**, https://www.linkedin.com/in/ahmedrabie23. No postal address or corporate registration is supplied or invented. Whether additional notice details are legally required remains an unresolved review item; LinkedIn must not be represented as satisfying every jurisdiction's formal service requirements.
 
 By choosing **I Agree** in the installer, you accept this license for the provided copy. If you do not agree, choose **I Do Not Agree** and do not install or use the proprietary Software under this grant. Independent mandatory-law and third-party rights remain unaffected. This release installer requires interactive acceptance; an organization's acceptance must be made by a person authorized to act for it. A hidden or skipped page does not establish assent.

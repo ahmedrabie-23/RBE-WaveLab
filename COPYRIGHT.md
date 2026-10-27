@@ -6,6 +6,6 @@ The [Proprietary Freeware License](LICENSE.txt), identifier WL-V1-1.0, is reprod
 
 The application source remains proprietary and private. Public access to this repository's documentation does not make the application open source or grant an MIT/GPL/Apache license to it. No additional open-source documentation license or copyright assignment is introduced here.
 
-The icon in this repository is existing RBE WaveLab branding. Its presence does not grant trademark ownership or permission to misrepresent endorsement. Contact [Ahmed Rabie](https://www.linkedin.com/in/ahmed-mo-rabie/) for questions.
+The icon in this repository is existing RBE WaveLab branding. Its presence does not grant trademark ownership or permission to misrepresent endorsement. Contact [Ahmed Rabie](https://www.linkedin.com/in/ahmedrabie23) for questions.
 
 This documentation-only repository does not distribute the application or third-party binaries. Future application distribution packages must preserve independent component licenses, notices and legally required covered sources; the WaveLab proprietary terms do not replace those rights. Source archives generated from this repository contain only its public documentation/metadata/branding files, not the proprietary application source.
