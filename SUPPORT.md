@@ -4,14 +4,14 @@ RBE WaveLab support is community-based and best-effort. No response time, repair
 
 ## Choose a channel
 
-|Need|Channel after community publication|
+|Need|Channel|
 |---|---|
 |Reproducible technical bug|[GitHub Issues](https://github.com/ahmedrabie-23/RBE-WaveLab/issues)|
 |Usage questions, learning, feedback or suggestions|[GitHub Discussions](https://github.com/ahmedrabie-23/RBE-WaveLab/discussions)|
 |General owner contact or collaboration|[Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23)|
 |Confidential security concern|Follow [SECURITY.md](SECURITY.md); do not open a public issue|
 
-These GitHub destinations are prepared for community setup. If a feature is unavailable, do not assume a report was received; use general owner contact without disclosing sensitive details.
+GitHub Issues and Discussions are active. If you encounter an access restriction, do not assume a report was received; use general owner contact without disclosing sensitive details.
 
 Before reporting a bug, check [release status](docs/RELEASE_STATUS.md), search existing issues and describe a minimal reproducible example. Include application version, Windows version/build, expected versus actual behavior and reproduction steps. Optional screenshots should show only information you intend to make public. Use a newly created nonconfidential example instead of your own engineering project.
 

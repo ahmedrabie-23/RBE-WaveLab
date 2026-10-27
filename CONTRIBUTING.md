@@ -14,4 +14,4 @@ Use [Discussions](https://github.com/ahmedrabie-23/RBE-WaveLab/discussions) for 
 
 Only submit material you are authorized to share. Use minimal examples and remove credentials, personal information and confidential engineering data. Follow the [Code of conduct](CODE_OF_CONDUCT.md). Report security concerns privately according to [SECURITY.md](SECURITY.md).
 
-GitHub channels/templates become active only when this prepared repository and the corresponding features are published. Support and review remain best-effort.
+GitHub Issues and Discussions are enabled for this public community repository. Support and review remain best-effort.
