@@ -52,7 +52,7 @@ No tokens, account or remote repository is required to build/read the site. The 
 
 `SITE_URL=https://ahmedrabie-23.github.io`, `BASE_PATH=/RBE-WaveLab` are the defaults. For a later approved custom domain, set its exact origin and `BASE_PATH=/`, rebuild and retest. Do not add CNAME/change DNS now. `src/data/release.json` is the only release metadata authority. Source maps are disabled. Fonts and media are local; no analytics, cookies or mandatory account.
 
-Generated paths: node_modules, dist, .astro and .local. Preserve the source/parent policy files, lockfile and rights notices. Never run broad recursive cleanup. Inspect free storage before regenerating caches. No system-wide environment changes are required.
+Generated paths: node_modules, dist, .astro and .local. Preserve the source/parent policy files, lockfile and rights notices. Never run broad recursive cleanup. Inspect free storage before regenerating caches. No system-wide environment changes are required. The runner enables Node's system-CA trust for its own process tree and restores NODE_OPTIONS afterward; it does not disable TLS verification or alter Windows trust/security settings.
 
 ## Maintenance
 

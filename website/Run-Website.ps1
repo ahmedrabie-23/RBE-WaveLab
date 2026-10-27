@@ -10,15 +10,19 @@ if(-not $NodePath){
 }
 $taskVersion=[version]((& $NodePath --version).TrimStart('v'))
 if($taskVersion -lt [version]'22.23.4'){throw "Node$taskVersion is too old. Use a maintained Node>=22.23.4."}
-$taskNpmCommand=(Get-Command npm.cmd -ErrorAction Stop).Source
-$taskNpmCLI=Join-Path (Split-Path $taskNpmCommand) 'node_modules\npm\bin\npm-cli.js'
+$taskNpmCLI=Join-Path $env:ProgramFiles 'nodejs\node_modules\npm\bin\npm-cli.js'
+if(-not(Test-Path -LiteralPath $taskNpmCLI)){
+ $taskNpmCommand=(Get-Command npm.cmd -ErrorAction Stop).Source
+ $taskNpmCLI=Join-Path (Split-Path $taskNpmCommand) 'node_modules\npm\bin\npm-cli.js'
+}
 if(-not(Test-Path -LiteralPath $taskNpmCLI)){throw 'npm CLI not found beside npm.cmd. Use a normal official Node/npm installation.'}
-$taskOldPath=$env:PATH;$taskOldTelemetry=$env:ASTRO_TELEMETRY_DISABLED;$taskOldSkip=$env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD
+$taskOldPath=$env:PATH;$taskOldTelemetry=$env:ASTRO_TELEMETRY_DISABLED;$taskOldSkip=$env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD;$taskOldOptions=$env:NODE_OPTIONS
 try{
  $env:PATH=(Split-Path $NodePath)+';'+$taskOldPath
  $env:ASTRO_TELEMETRY_DISABLED='1';$env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD='1'
+ if($env:NODE_OPTIONS -notmatch '(?:^|\s)--use-system-ca(?:\s|$)'){$env:NODE_OPTIONS=($env:NODE_OPTIONS+' --use-system-ca').Trim()}
  $taskScript=@{Dev='dev';Check='check';Test='test';Build='build';Validate='validate';Audit='audit:delivery';ReleaseFixtures='test:release-builds';BrowserTest='test:browser';Preview='preview'}
  Write-Host "Local-only $Action using Node$taskVersion. No publication."
  if($Action -eq 'Install'){& $NodePath $taskNpmCLI ci --cache .local/npm-cache --no-fund}else{& $NodePath $taskNpmCLI run $taskScript[$Action]}
  if($LASTEXITCODE -ne 0){throw "Website command failed with exit$LASTEXITCODE"}
-}finally{$env:PATH=$taskOldPath;$env:ASTRO_TELEMETRY_DISABLED=$taskOldTelemetry;$env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=$taskOldSkip}
+}finally{$env:PATH=$taskOldPath;$env:ASTRO_TELEMETRY_DISABLED=$taskOldTelemetry;$env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=$taskOldSkip;$env:NODE_OPTIONS=$taskOldOptions}
