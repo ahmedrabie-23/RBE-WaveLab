@@ -8,3 +8,6 @@ LICENSE.txt -text -whitespace
 *.woff binary
 *.woff2 binary
 *.ttf binary
+
+# Preserve original third-party notice formatting.
+website/public/third-party-notices.txt -whitespace
