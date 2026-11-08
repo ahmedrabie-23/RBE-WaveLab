@@ -34,7 +34,8 @@ test('download facts distinguish desktop release from the separate website deplo
  await expect(page.locator('code').filter({hasText:'db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba'})).toBeVisible();
  await expect(page.getByRole('link',{name:'Open the official GitHub Release'})).toHaveAttribute('href','https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0');
  await expect(page.getByText('unsigned · no Authenticode Verified Publisher',{exact:true})).toBeVisible();
- await expect(page.getByText(/Final Stable installation, Q05 RC5 uninstallation/)).toBeVisible();
+ await expect(page.getByText('Qualification limits',{exact:true})).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'Read release evidence and limitations'})).toHaveAttribute('href',base+'release-status/');
  await expect(page.getByRole('link',{name:'approved proprietary freeware license'})).toHaveAttribute('href',base+'license/');
 });
 for(const theme of ['light','dark'] as const)for(const width of [390,1440])test(`download axe and overflow ${theme} ${width}px`,async({page})=>{
