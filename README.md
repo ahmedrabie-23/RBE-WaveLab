@@ -4,7 +4,7 @@
 
 A free desktop virtual laboratory for learning transmission-line and communication engineering through interactive simulations.
 
-**RBE WaveLab V1.0.0 is published.** The [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0), ID 438495818, was published on 2026-11-08 at 20:55:53 UTC, targeting public website/documentation commit 3f86a9c4671322d73ff5c8f9b694617adb4203b6. The official website is not yet published; its direct installer CTA remains inactive in this local preparation candidate. Final Stable installation and Q05/Q06 RC5 uninstall/reinstallation are **NOT TESTED — Owner-Accepted Risk**. Acceptance of risk is not test success; installation/removal is not fully qualified.
+**RBE WaveLab V1.0.0 is published.** The [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0), ID 438495818, was published on 2026-11-08 at 20:55:53 UTC, targeting public website/documentation commit 3f86a9c4671322d73ff5c8f9b694617adb4203b6. The official website activation is owner-approved for https://ahmedrabie-23.github.io/RBE-WaveLab/. Its deployment evidence and timestamp are recorded separately from this source snapshot; the desktop Release timestamp is not a website publication date. Final Stable installation and Q05/Q06 RC5 uninstall/reinstallation are **NOT TESTED — Owner-Accepted Risk**. Acceptance of risk is not test success; installation/removal is not fully qualified.
 
 ## Explore transmission-line behavior
 

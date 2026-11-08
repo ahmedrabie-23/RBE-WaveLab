@@ -1,6 +1,6 @@
 # Getting started
 
-**RBE WaveLab V1.0.0 is available from the [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0).** Use the original installer and accompanying license/notices/User Materials. The official website has not yet been published.
+**RBE WaveLab V1.0.0 is available from the [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0).** Use the original installer and accompanying license/notices/User Materials. The owner-approved official website is https://ahmedrabie-23.github.io/RBE-WaveLab/; use its verified Download link or the official GitHub Release.
 
 1. Read the approved license, requirements and notices before choosing I Agree in the normal installer. Keep security protections enabled and stop on a block. Final Stable installation and Q05/Q06 uninstall/reinstallation remain NOT TESTED — Owner-Accepted Risk; incomplete manual removal remains possible.
 2. Open RBE WaveLab, then **Experiment Library → Wave Propagation**.

@@ -8,7 +8,7 @@ import {validateRelease,releaseView} from '../src/lib/release';
 test('published desktop identity is independent of website publication',()=>{
  assert.equal(facts.releaseID,438495818);assert.equal(facts.version,'1.0.0');assert.equal(facts.tag,'v1.0.0');
  assert.equal(facts.tagTargetCommit,'3f86a9c4671322d73ff5c8f9b694617adb4203b6');assert.equal(facts.releasePublicationTimestamp,'2026-11-08T20:55:53Z');
- assert.equal(facts.websitePublicationTimestamp,null);assert.equal(facts.websitePublicationStatus,'not-published');
+ assert.equal(facts.websitePublicationTimestamp,null);assert.equal(facts.websitePublicationStatus,'deployment-approved-publication-recorded-separately');
  assert.equal(facts.releaseURL,pin.origin+'/releases/tag/v1.0.0');
 });
 test('published bytes and full-download evidence match the immutable pin',()=>{
@@ -24,7 +24,8 @@ test('each actual publication state is guarded and pending activation is not app
  if(actual.canDownload)assert.equal(actual.downloadURL,facts.installer.assetURL);else assert.equal(actual.downloadURL,null);
  const inactive=releaseView({...structuredClone(raw),status:'pre-release',stable:null});assert.equal(inactive.canDownload,false);
  assert.equal(pending.stable.ownerApproved,false);assert.throws(()=>validateRelease(pending));
- assert.equal(pending.stable.publicationDate,facts.releasePublicationTimestamp.slice(0,10));assert.equal(pending.stable.verification.checkedAt,facts.verification.checkedAt);
+ assert.equal(pending.stable.publicationDate,facts.releasePublicationTimestamp.slice(0,10));assert(Number.isFinite(Date.parse(pending.stable.verification.checkedAt)));
+ if(actual.canDownload)assert.equal(actual.manifest.stable!.verification.checkedAt,facts.verification.checkedAt);
  for(const k of ['filename','bytes','sha256','assetURL'] as const)assert.equal(pending.stable[k],facts.installer[k]);
 });
 test('isolated synthetic approval can activate and suspension always removes CTA',()=>{

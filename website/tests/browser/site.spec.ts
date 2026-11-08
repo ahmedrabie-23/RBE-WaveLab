@@ -26,10 +26,10 @@ test('application license text matches authoritative source',async({page})=>{awa
 test('site-owned resources are local; no analytics/external runtime requests',async({page})=>{const unexpected:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4321/')&&!r.url().startsWith('data:'))unexpected.push(r.url());});await page.goto(base+'experiments/wave-propagation/');await page.evaluate(()=>document.fonts.ready);await page.locator('[data-gallery]').first().click();expect(unexpected).toEqual([]);});
 for(const theme of ['light','dark'] as const)for(const width of [390,1440])test(`axe and overflow ${theme} ${width}px`,async({page})=>{await page.setViewportSize({width,height:1000});await page.goto(base+'experiments/wave-propagation/');await page.locator('#theme').selectOption(theme);const results=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(results.violations).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();});
 
-test('download facts distinguish desktop release from unpublished website',async({page})=>{
+test('download facts distinguish desktop release from the separate website deployment record',async({page})=>{
  await page.goto(base+'download/');await expect(page.locator('#release-title')).toHaveText('RBE WaveLab V1.0.0');
  await expect(page.locator('time')).toHaveAttribute('datetime','2026-11-08T20:55:53Z');
- await expect(page.getByText('Not published · date unset',{exact:true})).toBeVisible();
+ await expect(page.getByText('Recorded separately from this build',{exact:true})).toBeVisible();
  await expect(page.getByText('220,461,849 bytes',{exact:true})).toBeVisible();
  await expect(page.locator('code').filter({hasText:'db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba'})).toBeVisible();
  await expect(page.getByRole('link',{name:'Open the official GitHub Release'})).toHaveAttribute('href','https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0');

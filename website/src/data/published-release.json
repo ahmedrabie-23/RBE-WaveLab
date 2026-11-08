@@ -8,7 +8,7 @@
   "releaseURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0",
   "releasePublicationTimestamp": "2026-11-08T20:55:53Z",
   "websitePublicationTimestamp": null,
-  "websitePublicationStatus": "not-published",
+  "websitePublicationStatus": "deployment-approved-publication-recorded-separately",
   "verifiedEnvironment": "Windows 11 x64",
   "installer": {
     "filename": "RBE_WaveLab_1.0.0_x64-setup.exe",
@@ -20,7 +20,7 @@
   "verification": {
     "assetHTTPStatus": 200,
     "computedSHA256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
-    "checkedAt": "2026-11-08T21:18:58.181836+00:00",
+    "checkedAt": "2026-11-08T22:06:44.755Z",
     "completeDownloadedBytes": 220461849
   },
   "assets": [
