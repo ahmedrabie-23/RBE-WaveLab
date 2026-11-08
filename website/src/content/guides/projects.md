@@ -30,6 +30,6 @@ Test a nonconfidential copy of an experiment/project in a separate permitted pro
 
 ## Share only what you intend
 
-Before sharing, inspect project names, authored instructions, labels and any embedded content for private information. Use a newly created minimal example in public bug reports. Application-level save/open and migration tests are not proof of installer upgrade/uninstall/reinstall behavior; those lifecycle gates are separate and remain unverified for the internal candidate.
+Before sharing, inspect project names, authored instructions, labels and any embedded content for private information. Use a newly created minimal example in public bug reports. Application-level save/open and migration tests are not proof of installer upgrade/uninstall/reinstall behavior; those lifecycle gates are separate and remain unverified for the released V1.0.0 installer.
 
 Continue with [Manual/Auto](/learn/guides/manual-auto/), [Experiment Builder](/learn/guides/experiment-builder/) or [support](/support/).

@@ -1,8 +1,8 @@
 # Getting started
 
-**Preparation preview: there is no public application download or Stable release yet.** The following describes an implemented workflow for an authorized candidate or a separately approved future release. This page is not an instruction to obtain an unofficial installer or redistribute RC5.
+**RBE WaveLab V1.0.0 is available from the [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0).** Use the original installer and accompanying license/notices/User Materials. The official website has not yet been published.
 
-1. When a build is officially authorized for your computer, read its supplied license, requirements and notices. Use the normal installer; keep security protections enabled. Current candidate installer consent and ordinary removal qualification remain incomplete.
+1. Read the approved license, requirements and notices before choosing I Agree in the normal installer. Keep security protections enabled and stop on a block. Final Stable installation and Q05/Q06 uninstall/reinstallation remain NOT TESTED — Owner-Accepted Risk; incomplete manual removal remains possible.
 2. Open RBE WaveLab, then **Experiment Library → Wave Propagation**.
 3. Choose **Preconfigured Setup → Start experiment**. Equipment Ready is a different starting mode for assembling supplied components; Empty Setup begins without them.
 4. Read the guide and choose **Run**. Built-in lessons use Manual mode. Wait for **Current** before interpreting results.

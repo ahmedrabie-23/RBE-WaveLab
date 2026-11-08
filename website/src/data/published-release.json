@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "product": "RBE WaveLab",
+  "version": "1.0.0",
+  "releaseID": 438495818,
+  "tag": "v1.0.0",
+  "tagTargetCommit": "3f86a9c4671322d73ff5c8f9b694617adb4203b6",
+  "releaseURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0",
+  "releasePublicationTimestamp": "2026-11-08T20:55:53Z",
+  "websitePublicationTimestamp": null,
+  "websitePublicationStatus": "not-published",
+  "verifiedEnvironment": "Windows 11 x64",
+  "installer": {
+    "filename": "RBE_WaveLab_1.0.0_x64-setup.exe",
+    "bytes": 220461849,
+    "sha256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+    "assetURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/RBE_WaveLab_1.0.0_x64-setup.exe",
+    "signature": "unsigned"
+  },
+  "verification": {
+    "assetHTTPStatus": 200,
+    "computedSHA256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+    "checkedAt": "2026-11-08T21:18:58.181836+00:00",
+    "completeDownloadedBytes": 220461849
+  },
+  "assets": [
+    {
+      "id": 725136754,
+      "name": "LICENSE.txt",
+      "size": 9108,
+      "digest": "sha256:c5abd77e1b64244c57b4b60b9b891182a9134282fc2f86ecfa16e373defc668e",
+      "browser_download_url": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/LICENSE.txt"
+    },
+    {
+      "id": 725136811,
+      "name": "RBE_WaveLab_1.0.0_User_Materials.zip",
+      "size": 1216606,
+      "digest": "sha256:9981b7efe99e15e76db9a17a86b33b4d9e300335d1e95291ecfa5610d0735bc0",
+      "browser_download_url": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/RBE_WaveLab_1.0.0_User_Materials.zip"
+    },
+    {
+      "id": 725080724,
+      "name": "RBE_WaveLab_1.0.0_x64-setup.exe",
+      "size": 220461849,
+      "digest": "sha256:db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+      "browser_download_url": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/RBE_WaveLab_1.0.0_x64-setup.exe"
+    },
+    {
+      "id": 725136728,
+      "name": "SHA256SUMS.txt",
+      "size": 372,
+      "digest": "sha256:92c47afe33dd9f50ae8f84eab930c6c9fa94496888d52fa98daa22b1208bc6de",
+      "browser_download_url": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/SHA256SUMS.txt"
+    },
+    {
+      "id": 725136782,
+      "name": "THIRD_PARTY_NOTICES.md",
+      "size": 1280,
+      "digest": "sha256:9c20a9a39c8094ea476e4be98fc492b6709695eb16119dea79caa51ce191d5bc",
+      "browser_download_url": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/THIRD_PARTY_NOTICES.md"
+    }
+  ]
+}

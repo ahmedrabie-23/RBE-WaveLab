@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "stable",
+  "candidateVersion": "1.0.0",
+  "platform": "Windows 11 x64",
+  "stable": {
+    "version": "1.0.0",
+    "publicationDate": "2026-11-08",
+    "releaseURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0",
+    "assetURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/download/v1.0.0/RBE_WaveLab_1.0.0_x64-setup.exe",
+    "filename": "RBE_WaveLab_1.0.0_x64-setup.exe",
+    "bytes": 220461849,
+    "sha256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+    "signature": "unsigned",
+    "notesURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0",
+    "ownerApproved": false,
+    "verification": {
+      "assetHTTPStatus": 200,
+      "computedSHA256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+      "checkedAt": "2026-11-08T21:18:58.181836+00:00"
+    }
+  },
+  "notice": "RBE WaveLab V1.0.0 is published on GitHub. Verify the installer checksum and read the license and qualification limits before installing.",
+  "knownLimitations": "Final Stable installation, Q05 RC5 uninstallation and Q06 RC5 reinstallation: NOT TESTED — Owner-Accepted Risk. Installation/removal is not fully qualified. Windows 10, clean-host/WebView2 provisioning, actual OS DPI and other-platform/soak coverage remain untested. Heavy scope/plot workloads have exceeded one second. Some frozen bundled guides retain build-time candidate wording.",
+  "sourceNotesURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/blob/main/docs/RELEASE_STATUS.md"
+}

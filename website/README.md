@@ -1,6 +1,6 @@
 # RBE WaveLab website — local candidate
 
-English static product/learning site. **No public launch is authorized.** Current release manifest is pre-release; no installer is offered. The parent root documents are required build inputs. Keep this directory inside its reviewed public-document snapshot. Desktop source is not needed.
+English static product/learning site. **Desktop V1.0.0 is published on GitHub; website publication is not authorized.** The normal website installer-action manifest stays pre-release/stable=null. The Download page links the actual official Release and shows verified facts, but its direct installer CTA is inactive. The parent root documents are required build inputs. Keep this directory inside its reviewed public-document snapshot. Desktop source is not needed.
 
 ## Current PC: exact quick start
 
@@ -24,7 +24,7 @@ Open **http://127.0.0.1:4321/RBE-WaveLab/**. Ctrl+C stops the owned preview/dev 
 .\Run-Website.ps1 -Action Preview
 ```
 
-BrowserTest expects the local preview running in another terminal; it uses installed Edge, not a downloaded browser. Playwright outputs go to `.local/`, outside committed source. ReleaseFixtures builds isolated local test variants and restores the actual manifest; it does not contact or click fake release assets.
+BrowserTest expects the local preview running in another terminal; it uses installed Edge, not a downloaded browser. Playwright outputs go to `.local/`, outside committed source. Run ReleaseFixtures only in an isolated copied fixture because it temporarily changes that copy's manifest and restores it; never use it on the authoritative P1 preparation source. It does not contact or click fake release assets.
 
 ## A different permitted computer
 
@@ -50,7 +50,7 @@ No tokens, account or remote repository is required to build/read the site. The 
 
 ## Configuration and ownership
 
-`SITE_URL=https://ahmedrabie-23.github.io`, `BASE_PATH=/RBE-WaveLab` are the defaults. For a later approved custom domain, set its exact origin and `BASE_PATH=/`, rebuild and retest. Do not add CNAME/change DNS now. `src/data/release.json` is the only release metadata authority. Source maps are disabled. Fonts and media are local; no analytics, cookies or mandatory account.
+`SITE_URL=https://ahmedrabie-23.github.io`, `BASE_PATH=/RBE-WaveLab` are the defaults. For a later approved custom domain, set its exact origin and `BASE_PATH=/`, rebuild and retest. Do not add CNAME/change DNS now. `src/data/release.json` is the sole website installer-action authority. `src/data/published-release.json` records the actual desktop Release ID/timestamp/assets and real full-download verification; website publication timestamp remains null. `activation-manifest.pending.json` is a non-imported activation proposal with ownerApproved=false: it deliberately cannot be used as an approved stable runtime manifest. After separate Phase 3B approval, review the exact activation diff, refresh real asset verification and set the approval field only under that authorization. Clearly labeled isolated local fixtures may simulate true to test activation/suspension; they never constitute owner approval. Source maps are disabled. Fonts and media are local; no analytics, cookies or mandatory account.
 
 Generated paths: node_modules, dist, .astro and .local. Preserve the source/parent policy files, lockfile and rights notices. Never run broad recursive cleanup. Inspect free storage before regenerating caches. No system-wide environment changes are required. The runner enables Node's system-CA trust for its own process tree and restores NODE_OPTIONS afterward; it does not disable TLS verification or alter Windows trust/security settings.
 

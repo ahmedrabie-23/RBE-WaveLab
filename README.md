@@ -4,7 +4,7 @@
 
 A free desktop virtual laboratory for learning transmission-line and communication engineering through interactive simulations.
 
-**Public documentation and community; application still pre-release. V1.0.0 has not been released.** The frozen local candidate is **1.0.0**, awaiting the owner’s separate public-release decision. This repository provides public documentation and community resources; no application installer or download is currently offered. Final Stable installation and Q05/Q06 RC5 uninstall/reinstallation are **NOT TESTED — Owner-Accepted Risk**. Acceptance of risk is not test success; installation/removal is not fully qualified.
+**RBE WaveLab V1.0.0 is published.** The [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0), ID 438495818, was published on 2026-11-08 at 20:55:53 UTC, targeting public website/documentation commit 3f86a9c4671322d73ff5c8f9b694617adb4203b6. The official website is not yet published; its direct installer CTA remains inactive in this local preparation candidate. Final Stable installation and Q05/Q06 RC5 uninstall/reinstallation are **NOT TESTED — Owner-Accepted Risk**. Acceptance of risk is not test success; installation/removal is not fully qualified.
 
 ## Explore transmission-line behavior
 
@@ -29,17 +29,17 @@ These are simulated readings within the documented analytical model, not acquisi
 4. Lossy Transmission Lines
 5. Distortionless Transmission Lines
 
-Use a preconfigured example, assemble supplied equipment, or start an empty setup. [Getting started](docs/GETTING_STARTED.md) describes the intended first experiment when an authorized build is available.
+Use a preconfigured example, assemble supplied equipment, or start an empty setup. [Getting started](docs/GETTING_STARTED.md) describes the first experiment using the official release.
 
 ## Platform and release status
 
-The initial target is **Windows 11 x64**, with an English interface and Microsoft Edge WebView2 Runtime. End users do not need Rust, Node.js, Visual Studio or Dymola. Calculations and local learning/project workflows run offline; GitHub community participation requires internet access and GitHub's usual account requirements.
+The verified operating environment is **Windows 11 x64**, with an English interface and Microsoft Edge WebView2 Runtime. End users do not need Rust, Node.js, Visual Studio or Dymola. Calculations and local learning/project workflows run offline; GitHub community participation requires internet access and GitHub's usual account requirements.
 
-Current-host candidate checks cover real Tauri/WebView2 operation and forced 100%/150% renderer scaling. They do not establish Windows 10 compatibility, actual Windows DPI transitions, every runtime installation state or a successful independent ordinary uninstall. The candidate is unsigned. Read [Requirements](docs/REQUIREMENTS.md) and [Release status and limitations](docs/RELEASE_STATUS.md).
+Current-host candidate checks cover real Tauri/WebView2 operation and forced 100%/150% renderer scaling. They do not establish Windows 10 compatibility, actual Windows DPI transitions, every runtime installation state or a successful independent ordinary uninstall. The V1.0.0 installer is unsigned. Read [Requirements](docs/REQUIREMENTS.md) and [Release status and limitations](docs/RELEASE_STATUS.md).
 
 ## Free to use; application source remains private
 
-RBE WaveLab is **proprietary freeware**, not open-source software. All V1.x releases and updates remain free for personal, educational, academic, institutional, research and commercial use under the [approved license](LICENSE.txt). The original unchanged installer may be redistributed without charging for the proprietary application/installer, while preserving required notices and third-party rights. This permission is not an announcement that an installer is available here.
+RBE WaveLab is **proprietary freeware**, not open-source software. All V1.x releases and updates remain free for personal, educational, academic, institutional, research and commercial use under the [approved license](LICENSE.txt). The original unchanged installer may be redistributed without charging for the proprietary application/installer, while preserving required notices and third-party rights. Use the original installer and accompanying materials from the official GitHub Release; the license remains the controlling text.
 
 Copyright holder/licensor: **Ahmed Rabie**, an individual. **RBE** is the display brand. Public availability of these documents does not grant access to the proprietary application source. Independent third-party components retain their own licenses and required covered-source rights. [Copyright and licensing](COPYRIGHT.md).
 
@@ -59,4 +59,4 @@ General owner contact and collaboration: [Ahmed Rabie on LinkedIn](https://www.l
 
 ## Public repository archives
 
-After approved website integration, GitHub-generated Source code (zip/tar.gz) archives contain this public documentation/branding/website tree. They do not contain the proprietary desktop application source, do not install WaveLab and are not substitutes for the exact approved Windows installer. Public website source remains subject to its separate notices and independent component rights.
+GitHub-generated Source code (zip/tar.gz) archives contain this public documentation/branding/website tree. They do not contain the proprietary desktop application source, do not install WaveLab and are not substitutes for the exact approved Windows installer. Public website source remains subject to its separate notices and independent component rights.

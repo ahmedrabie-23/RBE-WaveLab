@@ -1,15 +1,14 @@
-# Future publication checklist â€” NOT AUTHORIZATION
+# Website publication checklist — requires separate authorization
 
-No push/deployment/Release/installer upload/Stable tag is permitted by this local task. The owner must separately authorize the publication phase.
+The desktop V1.0.0 GitHub Release is published (Release ID 438495818, 2026-11-08T20:55:53Z); the official website is not. Phase 3A permits only local preparation/testing. No push, Actions/Pages enablement, dispatch, deployment or announcement is authorized here.
 
-1. Review the exact candidate, notices and owner-accepted final-install/Q05/Q06 skips. Record them as NOT TESTED — Owner-Accepted Risk; do not convert acceptance into test success or claim fully qualified installation/removal.
-2. Approve the exact Stable binary, release notes, signature wording and independent bytes/SHA-256. Exclude application source, private Git history, debug symbols/maps, credentials and internal reports.
-3. Separately authorize public release/asset publication; verify the exact real official asset exists and matches its expected size/hash before enabling a website link.
-4. Deliberately update source-of-truth root release/status documents and the one validated manifest. Never infer a Stable asset from RC5 or latest-release discovery. Run all applicable local checks and obtain owner visual/content approval.
-5. Review proposed root copyright clarification and independent notices. Integrate only the curated website source into the public repository, preserving its existing docs/community setup. Enabling Actions/Pages and adding the manual workflow each requires explicit scope approval.
-6. Manually deploy reviewed static output from a pinned official workflow only when authorized. There must be no push-triggered deployment. Verify real hosted deep links/404, canonical/sitemap/social assets and actual download after deployment.
-7. Keep the previous qualified artifact and source/hash record for rollback. Suspend unsafe/unavailable downloads with manifest state=suspended and test every installer action removed; publishing even an emergency change requires its own authorization.
+1. Review the exact P1 commit/tree/allowlist, unchanged application license, original component notices and preserved NOT TESTED — Owner-Accepted Risk disclosures. Do not claim fully qualified installation/removal.
+2. Recheck the public Release/tag P0 target and all five original assets. Independently GET/count/hash the actual installer; do not substitute API metadata for real bytes.
+3. Obtain explicit Phase 3B authorization for the exact activation diff and required repository/Actions/Pages actions. `activation-manifest.pending.json` currently has ownerApproved=false; it is not imported by normal builds and is not deployment approval. Use it only after reviewing the exact flag/manifest transition and rerunning checks. Keep the desktop publication timestamp separate from the still-unset website deployment time.
+4. Preserve the reviewed manual workflow/hash lock, main-only restriction and typed confirmation. No push/PR trigger. Do not change workflow/security settings beyond separately reviewed approval.
+5. Under authorization only, publish the exact reviewed activation source via normal protected procedures. The current local pre-push hook permits only the already-completed P0 update and rejects future pushes; any guard change requires explicit reviewed authorization, not bypass flags.
+6. Configure Actions/Pages/environment only if separately authorized. The Pages artifact is the contents of website/dist, not a wrapper or repository/source/evidence directory. Dispatch only the reviewed manual workflow on the reviewed main commit with the approved state/confirmation.
+7. Record genuine run/deployment IDs, source/artifact hashes, hosted URL and actual deployment time only after success. Verify HTTPS Home, all40 pages/deep links,404, project base /RBE-WaveLab/, canonical/sitemap/media/captions, themes/keyboard and actual installer links/hash.
+8. For an unsafe/unavailable installer, prepare and verify manifest status=suspended: zero installer CTAs and no installer GET prerequisite. Re-deployment/rollback or Pages disablement still requires covered authorization. A website suspension does not remove a GitHub asset; asset quarantine/removal requires separate approval.
 
-Full private planning procedure:09_DEPLOYMENT_AND_ROLLBACK.md. This file documents future work; no public step was executed in this candidate.
-
-Suspending a website CTA does not remove the GitHub Release asset. Any separate asset quarantine/removal needs explicit owner authorization.
+Private owner-review deployment/rollback packets and local simulation evidence are outside the public source. No public operation is performed by this checklist.

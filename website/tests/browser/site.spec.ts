@@ -6,7 +6,15 @@ test('all40 generated pages load with one heading and no broken local resource',
  for(const route of routes){const response=await page.goto(base+route);expect(response?.status(),route).toBe(200);await expect(page.locator('h1')).toHaveCount(1);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route).toBeTruthy();}
  const response=await page.goto(base+'page-that-does-not-exist/');expect(response?.status()).toBe(404);await expect(page.getByRole('heading',{level:1})).toBeVisible();expect(errors.filter(e=>!e.includes('page-that-does-not-exist'))).toEqual([]);
 });
-test('exact navigation and no active installer',async({page})=>{await page.goto(base);await expect(page.locator('[data-home-section]')).toHaveCount(8);await expect(page.getByRole('navigation',{name:'Primary',exact:true}).getByRole('link')).toHaveText(['Features','Experiments','Learn','Download','Community']);await page.getByRole('navigation',{name:'Primary',exact:true}).getByRole('link',{name:'Download',exact:true}).click();await expect(page.locator('[data-installer-download]')).toHaveCount(0);await expect(page.getByText('Release in preparation',{exact:true}).first()).toBeVisible();expect(await page.locator('a[href*="/releases/download/"]').count()).toBe(0);});
+test('exact navigation and validated installer state',async({page})=>{
+ const manifest=JSON.parse(fs.readFileSync('src/data/release.json','utf8'));const active=manifest.status==='stable';
+ await page.goto(base);await expect(page.locator('[data-home-section]')).toHaveCount(8);
+ await expect(page.getByRole('navigation',{name:'Primary',exact:true}).getByRole('link')).toHaveText(['Features','Experiments','Learn','Download','Community']);
+ await page.getByRole('navigation',{name:'Primary',exact:true}).getByRole('link',{name:'Download',exact:true}).click();
+ await expect(page.locator('[data-installer-download]')).toHaveCount(active?1:0);
+ if(active)await expect(page.locator('[data-installer-download]')).toHaveAttribute('href',manifest.stable.assetURL);
+ else {await expect(page.locator('[role="status"]')).toHaveText(manifest.status==='suspended'?'Downloads temporarily suspended':'Website download not activated');expect(await page.locator('a[href*="/releases/download/"]').count()).toBe(0);}
+});
 test('System Light Dark persist and react to OS preference',async({page})=>{await page.emulateMedia({colorScheme:'dark'});await page.goto(base);await expect(page.locator('html')).toHaveAttribute('data-theme','dark');const theme=page.locator('#theme');await theme.selectOption('light');await page.reload();await expect(page.locator('html')).toHaveAttribute('data-theme','light');await theme.selectOption('dark');await page.reload();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');await theme.selectOption('system');expect(await page.evaluate(()=>localStorage.getItem('wavelab-theme'))).toBeNull();await page.emulateMedia({colorScheme:'light'});await expect(page.locator('html')).toHaveAttribute('data-theme','light');});
 test('storage-denied fallback still reads and switches theme',async({page})=>{await page.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new Error('test storage denial');}}));await page.goto(base+'learn/getting-started/');await expect(page.locator('h1')).toContainText('first');await page.locator('#theme').selectOption('dark');await expect(page.locator('html')).toHaveAttribute('data-theme','dark');});
 test('keyboard skip and actual screenshot dialog focus return',async({page})=>{await page.goto(base);await page.keyboard.press('Tab');await expect(page.locator('a.skip-link')).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('#main')).toBeFocused();const button=page.locator('[data-gallery]').first();await button.focus();await page.keyboard.press('Enter');await expect(page.locator('#image-viewer')).toBeVisible();await expect(page.getByRole('button',{name:/Close image/})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#image-viewer')).not.toBeVisible();await expect(button).toBeFocused();});
@@ -17,3 +25,22 @@ test('static explanations work without JavaScript',async({browser})=>{const cont
 test('application license text matches authoritative source',async({page})=>{await page.goto(base+'license/');const actual=await page.locator('.license-text').textContent();expect(actual?.replaceAll('\r\n','\n')).toBe(fs.readFileSync('../LICENSE.txt','utf8').replaceAll('\r\n','\n'));});
 test('site-owned resources are local; no analytics/external runtime requests',async({page})=>{const unexpected:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4321/')&&!r.url().startsWith('data:'))unexpected.push(r.url());});await page.goto(base+'experiments/wave-propagation/');await page.evaluate(()=>document.fonts.ready);await page.locator('[data-gallery]').first().click();expect(unexpected).toEqual([]);});
 for(const theme of ['light','dark'] as const)for(const width of [390,1440])test(`axe and overflow ${theme} ${width}px`,async({page})=>{await page.setViewportSize({width,height:1000});await page.goto(base+'experiments/wave-propagation/');await page.locator('#theme').selectOption(theme);const results=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(results.violations).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();});
+
+test('download facts distinguish desktop release from unpublished website',async({page})=>{
+ await page.goto(base+'download/');await expect(page.locator('#release-title')).toHaveText('RBE WaveLab V1.0.0');
+ await expect(page.locator('time')).toHaveAttribute('datetime','2026-11-08T20:55:53Z');
+ await expect(page.getByText('Not published · date unset',{exact:true})).toBeVisible();
+ await expect(page.getByText('220,461,849 bytes',{exact:true})).toBeVisible();
+ await expect(page.locator('code').filter({hasText:'db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba'})).toBeVisible();
+ await expect(page.getByRole('link',{name:'Open the official GitHub Release'})).toHaveAttribute('href','https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0');
+ await expect(page.getByText('unsigned · no Authenticode Verified Publisher',{exact:true})).toBeVisible();
+ await expect(page.getByText(/Final Stable installation, Q05 RC5 uninstallation/)).toBeVisible();
+ await expect(page.getByRole('link',{name:'approved proprietary freeware license'})).toHaveAttribute('href',base+'license/');
+});
+for(const theme of ['light','dark'] as const)for(const width of [390,1440])test(`download axe and overflow ${theme} ${width}px`,async({page})=>{
+ await page.setViewportSize({width,height:1000});await page.goto(base+'download/');await page.locator('#theme').selectOption(theme);
+ const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(audit.violations).toEqual([]);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+ const state=JSON.parse(fs.readFileSync('src/data/release.json','utf8')).status;
+ await page.screenshot({path:`.local/screenshots/download-${state}-${process.env.WAVELAB_BROWSER||'msedge'}-${theme}-${width}.png`,fullPage:true});
+});

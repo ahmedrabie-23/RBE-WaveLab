@@ -12,6 +12,6 @@ Once a private route is established, useful information includes the affected ve
 
 ## Version and trust status
 
-V1.0.0 Stable is not released; the internal 1.0.0-rc.5 candidate is not a public download. A long-term security-maintenance schedule is not promised. Security support is best-effort, and no universal safety or comprehensive vulnerability-free claim is made.
+RBE WaveLab V1.0.0 is published in the [official GitHub Release](https://github.com/ahmedrabie-23/RBE-WaveLab/releases/tag/v1.0.0). Use its exact installer and approved checksums; internal RC installers are not substitutes. A long-term security-maintenance schedule is not promised. Security support is best-effort, and no universal safety or comprehensive vulnerability-free claim is made.
 
-The candidate is unsigned. A checksum can detect changes against a trusted expected value; it does not establish publisher identity. Keep Windows and security protections enabled. Windows and WebView2 servicing are governed by their own vendors and terms.
+The V1.0.0 installer is unsigned. A checksum can detect changes against a trusted expected value; it does not establish publisher identity. Keep Windows and security protections enabled. Windows and WebView2 servicing are governed by their own vendors and terms.
