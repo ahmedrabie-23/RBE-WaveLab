@@ -22,7 +22,7 @@ image: wave-propagation
 
 ## Before you start
 
-Know sinusoidal voltage, frequency and basic complex-number notation. Use an authorized WaveLab build and the **Wave Propagation** recipe. The public application release is still being prepared; this page is not a download offer.
+Know sinusoidal voltage, frequency and basic complex-number notation. Use an authorized WaveLab build and the **Wave Propagation** recipe. The official V1.0.0 application is published on GitHub; consult [Download and release information](/download/) for the release and its qualification limits.
 
 ## Physical interpretation
 

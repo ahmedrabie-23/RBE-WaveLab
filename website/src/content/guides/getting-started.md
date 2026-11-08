@@ -15,7 +15,7 @@ image: workbench
 
 ## Before opening an experiment
 
-Use only an authorized build on a permitted computer. The public Stable application has not been released, and the Download page deliberately offers no installer. Consult [requirements](/requirements/) and [release status](/release-status/). Read the application terms and keep Windows protections enabled.
+Use the official RBE WaveLab V1.0.0 release on a permitted computer. It is published on GitHub; this website is not yet published and its direct installer action remains inactive. Consult [requirements](/requirements/) and [release status](/release-status/). Read the application terms and keep Windows protections enabled.
 
 ## Start with a connected example
 
