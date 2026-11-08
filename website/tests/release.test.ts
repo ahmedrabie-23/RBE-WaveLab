@@ -5,7 +5,11 @@ import {validateRelease,releaseView} from '../src/lib/release';
 const origin='https://github.com/ahmedrabie-23/RBE-WaveLab';
 // Test data only: these metadata do not describe a published asset.
 export function stableFixture(){return {...structuredClone(raw),status:'stable',notice:'LOCAL TEST FIXTURE ONLY',knownLimitations:'Fixture, not a real installer.',stable:{version:'1.0.0',publicationDate:'2026-10-27',releaseURL:origin+'/releases/tag/v1.0.0',assetURL:origin+'/releases/download/v1.0.0/RBE-WaveLab_1.0.0_x64-setup.exe',filename:'RBE-WaveLab_1.0.0_x64-setup.exe',bytes:12345,sha256:'a'.repeat(64),signature:'unsigned',notesURL:origin+'/releases/tag/v1.0.0',ownerApproved:true,verification:{assetHTTPStatus:200,computedSHA256:'a'.repeat(64),checkedAt:'2026-10-27T00:00:00Z'}}};}
-test('actual pre-release never offers an installer',()=>{const v=releaseView(raw);assert.equal(v.canDownload,false);assert.equal(v.downloadURL,null);assert.equal(v.manifest.stable,null);});
+test('actual state follows validated activation and explicit pre-release remains inactive',()=>{
+ const v=releaseView(raw);assert.equal(v.canDownload,v.manifest.status==='stable');
+ assert.equal(v.downloadURL,v.manifest.status==='stable'?v.manifest.stable!.assetURL:null);
+ const inactive=releaseView({...structuredClone(raw),status:'pre-release',stable:null});assert.equal(inactive.canDownload,false);assert.equal(inactive.downloadURL,null);
+});
 test('approved local Stable fixture produces the exact validated URL',()=>{const f=stableFixture(),v=releaseView(f);assert.equal(v.downloadURL,f.stable.assetURL);assert.equal(v.canDownload,true);});
 test('suspended former Stable preserves metadata but removes the action',()=>{const f=stableFixture();f.status='suspended';const v=releaseView(f);assert.equal(v.canDownload,false);assert.equal(v.downloadURL,null);assert.equal(v.manifest.stable?.version,'1.0.0');});
 test('suspended before Stable is also safe',()=>{assert.equal(releaseView({...raw,status:'suspended'}).downloadURL,null);});

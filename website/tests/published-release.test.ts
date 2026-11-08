@@ -19,8 +19,10 @@ test('published bytes and full-download evidence match the immutable pin',()=>{
  assert.equal(facts.assets.length,5);assert.equal(new Set(facts.assets.map(a=>a.id)).size,5);
  for(const a of facts.assets){assert.equal(a.id,ids[a.name]);assert.equal(a.browser_download_url,pin.origin+'/releases/download/v1.0.0/'+a.name);}
 });
-test('normal preparation has no CTA and pending activation is not approval',()=>{
- assert.equal(raw.status,'pre-release');assert.equal(raw.stable,null);assert.equal(releaseView(raw).canDownload,false);
+test('each actual publication state is guarded and pending activation is not approval',()=>{
+ const actual=releaseView(raw);assert.equal(actual.canDownload,actual.manifest.status==='stable');
+ if(actual.canDownload)assert.equal(actual.downloadURL,facts.installer.assetURL);else assert.equal(actual.downloadURL,null);
+ const inactive=releaseView({...structuredClone(raw),status:'pre-release',stable:null});assert.equal(inactive.canDownload,false);
  assert.equal(pending.stable.ownerApproved,false);assert.throws(()=>validateRelease(pending));
  assert.equal(pending.stable.publicationDate,facts.releasePublicationTimestamp.slice(0,10));assert.equal(pending.stable.verification.checkedAt,facts.verification.checkedAt);
  for(const k of ['filename','bytes','sha256','assetURL'] as const)assert.equal(pending.stable[k],facts.installer[k]);
