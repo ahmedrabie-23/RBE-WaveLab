@@ -50,4 +50,10 @@ check(mathCount>70,`Insufficient rendered math coverage ${mathCount}`);
 const output={timestamp:new Date().toISOString(),base,origin,pages:pages.length,checkedLinks,mathExpressions:mathCount,failures};
 fs.mkdirSync('.local',{recursive:true});fs.writeFileSync('.local/build-validation.json',JSON.stringify(output,null,2));console.log(JSON.stringify(output,null,2));
 if(args.includes('--require-stable')){const manifest=JSON.parse(fs.readFileSync('src/data/release.json','utf8'));assert.equal(manifest.status,'stable','Future publication requires approved verified Stable manifest');}
+const publicationState=args.find(a=>a.startsWith('--require-publication-state='))?.split('=')[1];
+if(publicationState!==undefined){
+ assert(['stable','suspended'].includes(publicationState),'Publication permits only explicit stable or suspended');
+ assert.equal(manifest.status,publicationState,'Manifest must match the approved publication/rollback state');
+ if(publicationState==='suspended')assert.equal(canDownload,false,'Rollback must remove installer action');
+}
 assert.equal(failures.length,0,`Build audit failed (${failures.length})`);

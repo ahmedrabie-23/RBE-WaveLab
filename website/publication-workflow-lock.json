@@ -1,0 +1,5 @@
+{
+  "path": ".github/workflows/pages.yml",
+  "sha256": "cdc557dbf440e08d13d182d4bca33eda755bbc0ba0ff78b550742d4cca37d326",
+  "policy": "Only this reviewed manual workflow allowed in explicit deployment-audit mode; no automatic push or PR deployment trigger."
+}

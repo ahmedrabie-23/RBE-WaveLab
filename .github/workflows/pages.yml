@@ -1,0 +1,67 @@
+# PROPOSAL ONLY — NOT ACTIVATED OR AUTHORIZATION. Keep outside any live repository until separate owner approval.
+# LOCAL REVIEW TEMPLATE ONLY. Not installed in .github/workflows.
+# Requires separate owner approval, GitHub Actions/Pages authorization and actual Stable qualification.
+name: Approved manual website publication
+on:
+  workflow_dispatch:
+    inputs:
+      release_state:
+        description: Approved stable launch or suspended rollback
+        required: true
+        type: choice
+        default: stable
+        options: [stable, suspended]
+      owner_authorization:
+        description: Type OWNER_APPROVED_WEBSITE_PUBLICATION only after separate written approval
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main' && inputs.owner_authorization == 'OWNER_APPROVED_WEBSITE_PUBLICATION'
+    permissions:
+      contents: read
+      pages: read
+    runs-on: ubuntu-latest
+    env:
+      WAVELAB_DEPLOYMENT_AUDIT: '1'
+      ASTRO_TELEMETRY_DISABLED: '1'
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # official v6, read-only verified2026-10-27
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # official v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+        working-directory: website
+      - name: Verify actual public frozen installer before stable activation
+        if: inputs.release_state == 'stable'
+        run: node scripts/verify-public-release.mjs --approved-stable-publication
+        working-directory: website
+      - run: npm run check && npm test && npm run build && npm run audit:delivery
+        working-directory: website
+      - run: node scripts/validate-build.mjs --require-publication-state=${{ inputs.release_state }}
+        working-directory: website
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # official v6; does not authorize enabling Pages
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # official v5
+        with:
+          path: website/dist
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy approved static output
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # official v5

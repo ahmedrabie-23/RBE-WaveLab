@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "pre-release",
-  "candidateVersion": "1.0.0-rc.5",
+  "candidateVersion": "1.0.0",
   "platform": "Windows 11 x64",
   "stable": null,
-  "notice": "The first public application release is being prepared. No application download is available yet.",
-  "knownLimitations": "Independent installer consent and ordinary uninstall/reinstall qualification remain unverified.",
+  "notice": "V1.0.0 local preparation is complete. No public installer is available until separate owner authorization and real asset verification.",
+  "knownLimitations": "Final Stable installation and Q05/Q06 uninstall/reinstallation: NOT TESTED \u2014 Owner-Accepted Risk. Installation/removal is not fully qualified; Windows10/clean-host provisioning remain untested.",
   "sourceNotesURL": "https://github.com/ahmedrabie-23/RBE-WaveLab/blob/main/docs/RELEASE_STATUS.md"
 }

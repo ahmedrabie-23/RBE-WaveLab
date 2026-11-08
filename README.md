@@ -4,7 +4,7 @@
 
 A free desktop virtual laboratory for learning transmission-line and communication engineering through interactive simulations.
 
-**Public documentation and community; application still pre-release. V1.0.0 has not been released.** The latest internal candidate is **1.0.0-rc.5**. This repository provides public documentation and community resources; no application installer or download is currently offered. Independent installer consent and ordinary uninstall/reinstall verification are still pending.
+**Public documentation and community; application still pre-release. V1.0.0 has not been released.** The frozen local candidate is **1.0.0**, awaiting the owner’s separate public-release decision. This repository provides public documentation and community resources; no application installer or download is currently offered. Final Stable installation and Q05/Q06 RC5 uninstall/reinstallation are **NOT TESTED — Owner-Accepted Risk**. Acceptance of risk is not test success; installation/removal is not fully qualified.
 
 ## Explore transmission-line behavior
 
@@ -56,3 +56,7 @@ No mandatory application account or application telemetry is introduced. Feedbac
 Use [Issues](https://github.com/ahmedrabie-23/RBE-WaveLab/issues) for bugs and [Discussions](https://github.com/ahmedrabie-23/RBE-WaveLab/discussions) for questions, learning and suggestions. Issues and Discussions are enabled for this public community repository.
 
 General owner contact and collaboration: [Ahmed Rabie on LinkedIn](https://www.linkedin.com/in/ahmedrabie23). Support is community-based and best-effort, with no guaranteed response or repair time. Never post confidential projects, credentials or proprietary engineering data.
+
+## Public repository archives
+
+After approved website integration, GitHub-generated Source code (zip/tar.gz) archives contain this public documentation/branding/website tree. They do not contain the proprietary desktop application source, do not install WaveLab and are not substitutes for the exact approved Windows installer. Public website source remains subject to its separate notices and independent component rights.

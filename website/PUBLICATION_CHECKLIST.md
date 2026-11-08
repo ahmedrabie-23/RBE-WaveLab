@@ -1,8 +1,8 @@
-# Future publication checklist — NOT AUTHORIZATION
+# Future publication checklist â€” NOT AUTHORIZATION
 
 No push/deployment/Release/installer upload/Stable tag is permitted by this local task. The owner must separately authorize the publication phase.
 
-1. Close the application's actual Stable qualification gates and review legal notices; do not substitute accepted risk for ordinary installer/uninstall/reinstall evidence.
+1. Review the exact candidate, notices and owner-accepted final-install/Q05/Q06 skips. Record them as NOT TESTED — Owner-Accepted Risk; do not convert acceptance into test success or claim fully qualified installation/removal.
 2. Approve the exact Stable binary, release notes, signature wording and independent bytes/SHA-256. Exclude application source, private Git history, debug symbols/maps, credentials and internal reports.
 3. Separately authorize public release/asset publication; verify the exact real official asset exists and matches its expected size/hash before enabling a website link.
 4. Deliberately update source-of-truth root release/status documents and the one validated manifest. Never infer a Stable asset from RC5 or latest-release discovery. Run all applicable local checks and obtain owner visual/content approval.

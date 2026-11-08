@@ -5,7 +5,7 @@ This is a public documentation/community repository for a pre-release applicatio
 ## Current approved directions
 
 - Prepare clear English documentation and a community space for transmission-line learning.
-- Complete the remaining independent installer consent and ordinary uninstall/reinstall qualification, preserving project/template/preferences data.
+- Record the owner-accepted skipped final Stable installation and Q05/Q06 uninstall/reinstallation as NOT TESTED — Owner-Accepted Risk; preserve historical RC3 Q02 FAIL and separate remediation PASS. Do not describe lifecycle qualification as complete.
 - Resolve material qualification findings and seek a separate owner decision on the first stable Windows 11 x64 release.
 - Prepare an official website in a separately authorized phase; no website is deployed here.
 

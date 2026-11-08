@@ -9,3 +9,5 @@ A workspace of at least 900 × 600 logical pixels is intended; larger windows ar
 Calculations, built-in lessons and local save/open work offline. A full WebView2 Standalone is included in the current installer design, but disconnected clean-host provisioning is not yet qualified. Windows and WebView2 may communicate independently when connected under their own terms. GitHub community access requires internet connectivity.
 
 There is no public installer offered by this prepared repository. Read [release status](RELEASE_STATUS.md) before interpreting platform or lifecycle claims.
+
+Frozen V1.0.0 local installer: RBE_WaveLab_1.0.0_x64-setup.exe. Its normal installation was not executed: NOT TESTED — Owner-Accepted Risk. Current-host extracted-payload execution does not verify installation, provisioning or removal. Public availability is governed by the actual approved Release and current release manifest, not this filename alone.

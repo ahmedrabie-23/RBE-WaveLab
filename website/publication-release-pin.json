@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "filename": "RBE_WaveLab_1.0.0_x64-setup.exe",
+  "bytes": 220461849,
+  "sha256": "db6960de8bf73660dfbf8e51d81af37b1afaabb1706d317c629e42f6a7d2b2ba",
+  "origin": "https://github.com/ahmedrabie-23/RBE-WaveLab",
+  "unsigned": true,
+  "changesRequireNewOwnerReview": true
+}

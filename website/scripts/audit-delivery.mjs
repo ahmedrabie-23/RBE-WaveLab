@@ -14,7 +14,15 @@ for(const file of files){
   if(/C:[\\/]+Users[\\/]+ENG-RABEE|\.codex[\\/]attachments|(?:127\.0\.0\.1:\d+.*token=)/i.test(t)||t.includes(cacheName))issues.push(`Private/local path: ${file}`);
  }
 }
-assert(!fs.existsSync('../.github/workflows'),'No active workflow may be introduced');
+const workflowDirectory=path.resolve('../.github/workflows');
+if(fs.existsSync(workflowDirectory)){
+ assert.equal(process.env.WAVELAB_DEPLOYMENT_AUDIT,'1','Workflow presence requires explicit reviewed deployment-audit mode');
+ const lock=JSON.parse(fs.readFileSync('publication-workflow-lock.json','utf8'));
+ assert.equal(lock.path,'.github/workflows/pages.yml');
+ assert.deepEqual(fs.readdirSync(workflowDirectory).sort(),['pages.yml'],'Unexpected workflow file');
+ assert.equal(sha(fs.readFileSync(path.join('..',lock.path))),lock.sha256,'Workflow differs from reviewed exact bytes');
+}
+
 assert(fs.readFileSync('public/third-party-notices.txt','utf8').includes('SIL OPEN FONT LICENSE'),'Missing font notices');
 const result={timestamp:new Date().toISOString(),authoritativeDocuments:Object.keys(expected).length,sourceFiles:source.length,builtFiles:dist.length,scannedText,issues,limits:'Pattern scan and curated-tree inspection, not proof of absence of every possible secret. No application source or installer is required.'};
 fs.mkdirSync('.local',{recursive:true});fs.writeFileSync('.local/delivery-audit.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));assert.equal(issues.length,0,'Delivery audit failed');
